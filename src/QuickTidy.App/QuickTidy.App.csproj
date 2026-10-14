@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 主程序：设置界面 + 右键菜单的移动处理器 -->
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>QuickTidy</AssemblyName>
+    <RootNamespace>QuickTidy.App</RootNamespace>
+    <ApplicationIcon>..\..\assets\qt.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Product>速理 QuickTidy</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuickTidy.Core\QuickTidy.Core.csproj" />
+  </ItemGroup>
+
+</Project>

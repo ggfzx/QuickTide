@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- QuickTidy sparse package：为未打包的 Win32 程序提供包标识，注册 Win11 新式右键菜单。
+     与 QuickTidy.MenuHost.exe / qt.ico / Assets\Logo.png 放在同一目录，通过
+     Add-AppxPackage -Register 注册（详见 Register-SparsePackage.ps1）。 -->
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
+  xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
+  xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
+  xmlns:desktop5="http://schemas.microsoft.com/appx/manifest/desktop/windows10/5"
+  IgnorableNamespaces="uap rescap uap10 com desktop4 desktop5">
+
+  <Identity Name="QuickTidy" ProcessorArchitecture="neutral" Publisher="CN=QuickTidy" Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>速理 QuickTidy</DisplayName>
+    <PublisherDisplayName>QuickTidy</PublisherDisplayName>
+    <Logo>Assets\Logo.png</Logo>
+    <uap10:AllowExternalContent>true</uap10:AllowExternalContent>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <rescap:Capability Name="unvirtualizedResources" />
+  </Capabilities>
+
+  <Applications>
+    <Application Id="QuickTidy" uap10:TrustLevel="mediumIL" uap10:RuntimeBehavior="win32App">
+      <uap:VisualElements AppListEntry="none" DisplayName="速理 QuickTidy"
+                          Description="右键快速整理文件到常用目录"
+                          BackgroundColor="transparent"
+                          Square150x150Logo="Assets\Logo.png"
+                          Square44x44Logo="Assets\Logo.png" />
+      <Extensions>
+        <!-- 进程外 COM 服务器：explorer 通过 CLSID 拉起 QuickTidy.MenuHost.exe -->
+        <com:Extension Category="windows.comServer">
+          <com:ComServer>
+            <com:ExeServer Executable="QuickTidy.MenuHost.exe" DisplayName="QuickTidy Shell Extension">
+              <com:Class Id="7E42F3C9-2A64-4B7D-9E81-C50D3A8F6B24" />
+            </com:ExeServer>
+          </com:ComServer>
+        </com:Extension>
+        <!-- Win11 新式右键菜单：所有文件 + 文件夹 -->
+        <desktop4:Extension Category="windows.fileExplorerContextMenus">
+          <desktop4:FileExplorerContextMenus>
+            <desktop5:ItemType Type="*">
+              <desktop5:Verb Id="QuickTidy" Clsid="7E42F3C9-2A64-4B7D-9E81-C50D3A8F6B24" />
+            </desktop5:ItemType>
+            <desktop5:ItemType Type="Directory">
+              <desktop5:Verb Id="QuickTidy" Clsid="7E42F3C9-2A64-4B7D-9E81-C50D3A8F6B24" />
+            </desktop5:ItemType>
+          </desktop4:FileExplorerContextMenus>
+        </desktop4:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>

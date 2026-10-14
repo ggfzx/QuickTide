@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!--
+      Win11 新式右键菜单宿主：进程外 COM 本地服务器（LocalServer32）。
+      实现 IExplorerCommand，通过 sparse package 的 com:ExeServer 或注册表
+      HKCU\...\CLSID\{clsid}\LocalServer32 被资源管理器激活。
+    -->
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>QuickTidy.MenuHost</AssemblyName>
+    <RootNamespace>QuickTidy.MenuHost</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuickTidy.Core\QuickTidy.Core.csproj" />
+  </ItemGroup>
+
+</Project>

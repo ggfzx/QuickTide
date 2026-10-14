@@ -1,0 +1,21 @@
+# Normalize line endings so the repo is identical on every machine.
+# Default: store LF in the repo, check out with the platform's native ending.
+* text=auto
+
+# These are executed by cmd.exe / PowerShell, which need CRLF.
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+*.ps1  text eol=crlf
+*.iss  text eol=crlf
+*.sln  text eol=crlf
+
+# Windows Forms .csproj/.resx are whitespace- and encoding-sensitive.
+*.csproj text
+*.resx  text
+
+# Never touch binaries.
+*.png   binary
+*.ico   binary
+*.zip   binary
+*.exe   binary
+*.dll   binary

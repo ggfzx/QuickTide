@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{14573173-D2AA-464C-AAED-C341AE72B97F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTidy.Core", "src\QuickTidy.Core\QuickTidy.Core.csproj", "{D796FEF2-7474-42B1-95EE-7D5CD26BBE59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTidy.App", "src\QuickTidy.App\QuickTidy.App.csproj", "{D01A2488-4520-4FD3-BDB9-62AF70DE5683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTidy.MenuHost", "src\QuickTidy.MenuHost\QuickTidy.MenuHost.csproj", "{602C4280-AE6B-442A-B43B-15FDA2730653}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D796FEF2-7474-42B1-95EE-7D5CD26BBE59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D796FEF2-7474-42B1-95EE-7D5CD26BBE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D796FEF2-7474-42B1-95EE-7D5CD26BBE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D796FEF2-7474-42B1-95EE-7D5CD26BBE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D01A2488-4520-4FD3-BDB9-62AF70DE5683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01A2488-4520-4FD3-BDB9-62AF70DE5683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01A2488-4520-4FD3-BDB9-62AF70DE5683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01A2488-4520-4FD3-BDB9-62AF70DE5683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{602C4280-AE6B-442A-B43B-15FDA2730653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602C4280-AE6B-442A-B43B-15FDA2730653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602C4280-AE6B-442A-B43B-15FDA2730653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602C4280-AE6B-442A-B43B-15FDA2730653}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D796FEF2-7474-42B1-95EE-7D5CD26BBE59} = {14573173-D2AA-464C-AAED-C341AE72B97F}
+		{D01A2488-4520-4FD3-BDB9-62AF70DE5683} = {14573173-D2AA-464C-AAED-C341AE72B97F}
+		{602C4280-AE6B-442A-B43B-15FDA2730653} = {14573173-D2AA-464C-AAED-C341AE72B97F}
+	EndGlobalSection
+EndGlobal

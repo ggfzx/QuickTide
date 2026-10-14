@@ -1,0 +1,34 @@
+## .NET build outputs
+bin/
+obj/
+*.user
+*.suo
+*.pdb
+*.dll
+*.exe
+*.exe.config
+
+## Build artifact directories
+publish/
+out/
+
+## packaging/payload/ is a staging dir assembled by packaging/build.cmd
+## (copies assets/ + README + the two published exes into one folder)
+packaging/payload/
+
+## Release zip — built by packaging/build.cmd, published as a GitHub Release asset
+packaging/*.zip
+*.zip
+
+## Rider / VS
+.vs/
+.idea/
+*.DotSettings.user
+
+## OS junk
+.DS_Store
+Thumbs.db
+
+## Local user config (contains per-user registered paths)
+config.json
+*.log
