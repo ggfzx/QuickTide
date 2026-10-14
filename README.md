@@ -6,8 +6,6 @@
 
 Windows 右键菜单里新增「速理」入口，把选中的文件/文件夹瞬间移动到你设定的常用目录。
 
-[English | [简体中文](README.zh-CN.md)]
-
 </div>
 
 ## 它能做什么
@@ -102,7 +100,5 @@ A: 任何**当前用户可写**的位置都行。**不要放 `C:\Program Files`*
 dotnet publish src\QuickTidy.MenuHost -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:EnableCompressionInSingleFile=true
 dotnet publish src\QuickTidy.App    -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true
 ```
-
-工程结构、技术选型、Win11 IExplorerCommand 实现细节等，参见 [`README.zh-CN.md`](README.zh-CN.md)。
 
 </details>
